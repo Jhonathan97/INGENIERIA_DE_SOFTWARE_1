@@ -41,10 +41,9 @@ public class Estudiante {
      */
     public void adicionarMateria(String codigo, String nombre) {
         Materia materia = buscarMateria(codigo);
-        if (materia != null) {
-
+        if (materia == null) {
+            materias.add(materia);
         }
-        materias.add(materia);
     }
 
     /**
