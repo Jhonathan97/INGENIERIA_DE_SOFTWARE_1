@@ -40,10 +40,10 @@ public class LectorArchivo {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public List<String> leer(File archivo) throws FileNotFoundException, IOException {
+    public List<String> leer() throws FileNotFoundException, IOException {
         String cadena;
         List<String> cadenas = new ArrayList<String>();
-        FileReader fr = new FileReader(archivo);
+        FileReader fr = new FileReader(this.archivo);
         BufferedReader b = new BufferedReader(fr);
         while ((cadena = b.readLine()) != null) {
             cadenas.add(cadena);
