@@ -62,4 +62,8 @@ public class Estudiante {
         }
         return null;
     }
+    
+    public String getCedula(){
+        return this.cedula;
+    }
 }
