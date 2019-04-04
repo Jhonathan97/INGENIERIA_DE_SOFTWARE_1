@@ -8,7 +8,7 @@ package Model;
 /**
  * Clase que modela una Materia la cual cuenta un codigo y nombre
  *
- * @version 1.0
+ * @version 1.1
  * @author JHONATHAN
  */
 public class Materia {
@@ -27,5 +27,9 @@ public class Materia {
 
     public String getCodigo(){
         return this.codigo;
+    }
+    
+    public String getNombre(){
+        return this.nombre;
     }
 }

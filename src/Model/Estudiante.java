@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Clase que modela a un estudiante el cual cuenta con una cedula, un nombre y
  * una lista de materias
- * @version 1.0
+ * @version 1.1
  * @author JHONATHAN
  */
 public class Estudiante {
@@ -61,6 +61,20 @@ public class Estudiante {
         }
         return null;
     }
+    /**
+     * Metodo que concatena el nombre,la cedula del estudiante y el nombre de las 
+     * materias que tiene inscritas en una unica cadena lista para retornar
+     * @return cadena con  el nombre del estudiante, la cedula y el nombre de todas las materias
+     * que etsa viendo
+     */
+    public String toString(){
+    String cadena="Nombre: "+this.nombre+" cedula: "+this.cedula+" materias: ";
+        for (Materia materia : materias) {
+            cadena+=materia.getNombre()+", ";
+        }
+        return cadena;
+    }
+    
     
     public String getCedula(){
         return this.cedula;
