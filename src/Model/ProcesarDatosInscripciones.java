@@ -25,19 +25,24 @@ public class ProcesarDatosInscripciones {
     }
 
     /**
-     *
-     * @param archivo
-     * @return
+     * se encarga de leer el archivo y consolidar los datos de cada estudiante
+     * @param archivo planos con las incribciones de las materias de los
+     * estudiantes 
+     * @return la lista del consolidado de materias de cada estudiante
      * @throws java.io.IOException
      */
     public List<String> consolidarDatosInscripciones(File archivo) throws IOException {
         LectorArchivo file = new LectorArchivo(archivo);
         List<String> datos =file.leer();
+        List<String> consolidado = new ArrayList<>();
         if(datos ==null){
             throw new IOException("Archivo no valido");
         }
         procesarDatosArchivo(datos);
-        return null;
+        for (Estudiante estudiante:estudiantes){
+            consolidado.add(estudiante.toString());
+        }
+        return consolidado;
     }
 
     /**
